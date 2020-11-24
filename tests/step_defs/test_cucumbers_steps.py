@@ -1,13 +1,13 @@
 from pytest_bdd import scenario, given, when, then
 
 from cucumbers import CucumberBasket
-
+import pytest
 
 @scenario('../features/cucumbers.feature', 'Add cucumbers to a basket')
 def test_add():
     pass
 
-
+@pytest.fixture
 @given("the basket has 2 cucumbers")
 def basket():
     return CucumberBasket(initial_count=2)
